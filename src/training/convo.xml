@@ -1,0 +1,74 @@
+<basic_convo_inputs>
+	<talk input="hi"> greetings/all </talk>
+	<talk input="hello"> greetings/all </talk>
+	<talk input="hiya"> greetings/all </talk>
+	<talk input="whats up"> greetings/all </talk>
+	
+	<talk input="goodbye"> goodbyes/bye_1 </talk>
+	<talk input="bye"> goodbyes/all </talk>
+	<talk input="see ya"> goodbyes/all </talk>
+	<talk input="see you"> goodbyes/all </talk>
+	<talk input="laters"> goodbyes/all </talk>
+	
+	<talk input="how are you"> convo/howru/all </talk>
+	<talk input="are you okay"> convo/howru/all </talk>
+	
+	<talk input="i am good"> convo/impositive/all </talk>
+	<talk input="i am okay"> convo/impositive/all </talk>
+	<talk input="i am ok"> convo/impositive/all </talk>
+	<talk input="i am fine"> convo/impositive/all </talk>
+	<talk input="i am decent"> convo/impositive/all </talk>
+	
+	<talk input="i am bad"> convo/imnegative/all </talk>
+	<talk input="i am not good"> convo/imnegative/all </talk>
+	<talk input="i am terrible"> convo/imnegative/all </talk>
+	
+	<talk input="thanks"> convo/thanky/all </talk>
+	<talk input="thank you"> convo/thanky/all </talk>
+	<talk input="cheers"> convo/thanky/all </talk>
+	
+	<talk input="do you know who i am"> "I'm ronnie fucking pickering mate" </talk>
+	<talk input="x x a jump right left right"> "Initiating super a.i mode, please standby" </talk>
+	<talk input="who are you"> "I'm Drew, silly!" </talk>
+	<talk input="what are you"> "Hahahahaha, *brainwipe initiated*" </talk>
+</basic_convo_inputs>
+
+<basic_convo_outputs>
+	<greetings>
+		<reply id="greeting_1"> Hello, :user:! </reply>
+		<reply id="greeting_2"> Hi there, :user:! </reply>
+		<reply id="greeting_3"> How can I help you, :user:? </reply>
+	</greetings>
+	
+	<goodbyes>
+		<reply id="bye_1"> I'll see you later! </reply>
+		<reply id="bye_2"> Aww, goodbye! </reply>
+	</goodbyes>
+	
+	<convo>
+		<howru>
+			<reply id="howru_1"> I am good, and you? </reply>
+			<reply id="howru_2"> I am okay, you? </reply>
+			<reply id="howru_3"> Meh, I'm a robot. You? </reply>
+			<reply id="howru_4"> I am good, and you? </reply>
+		</howru>
+		
+		<impositive>
+			<reply id="impos_1"> That's great! </reply>
+			<reply id="impos_2"> That's really good! </reply>
+			<reply id="impos_3"> Oh great! </reply>
+			
+		</impositive>
+		
+		<imnegative>
+			<reply id="imneg_1"> Oh no! </reply>
+			<reply id="imneg_2"> That's not good! </reply>
+		</imnegative>
+		
+		<thanky>
+			<reply id="thank_1"> No problem! </reply>
+			<reply id="thank_2"> No problemo, kiddo! </reply>
+		</thanky>
+		
+	</convo>
+</basic_convo_outputs>
