@@ -29,9 +29,10 @@ import playsound as PlaySound
 GithubURL = "https://raw.githubusercontent.com/attroxide/Drew-Bot"
 Updater = UpdateChecker(GithubURL,"version.txt")
 Chatter = ChatBot.Bot()
-t = Updater._canupdate()
-print(t)
-if t:
+
+# Check for update
+UpdateCheck = Updater._canupdate()
+if UpdateCheck:
     yn = input("An update was found, do you want to update?")
     if yn.lower() == "yes":
         Updater.Update()
