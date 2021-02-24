@@ -26,9 +26,15 @@ import threading
 import playsound as PlaySound
 
 ## Setup Variables
-GithubURL = "https://github.com/attroxide/Drew-Bot"
+GithubURL = "https://raw.githubusercontent.com/attroxide/Drew-Bot"
 Updater = UpdateChecker(GithubURL,"version.txt")
 Chatter = ChatBot.Bot()
+t = Updater._canupdate()
+print(t)
+if t:
+    yn = input("An update was found, do you want to update?")
+    if yn.lower() == "yes":
+        Updater.Update()
 
 ## Run Function
 def BotRuntime():
