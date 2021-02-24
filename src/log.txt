@@ -1,0 +1,4 @@
+
+BMO: What do you want me to search for?
+Test_: British Empire
+BMO: Here is a wikipedia article on British Empire

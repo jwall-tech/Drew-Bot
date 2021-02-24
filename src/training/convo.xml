@@ -1,3 +1,4 @@
+<document>
 <basic_convo_inputs>
 	<talk input="hi"> greetings/all </talk>
 	<talk input="hello"> greetings/all </talk>
@@ -28,7 +29,7 @@
 	<talk input="cheers"> convo/thanky/all </talk>
 	
 	<talk input="do you know who i am"> "I'm ronnie fucking pickering mate" </talk>
-	<talk input="x x a jump right left right"> "Initiating super a.i mode, please standby" </talk>
+	<talk input="x b a jump right left right"> "Initiating super a.i mode, please standby" </talk>
 	<talk input="who are you"> "I'm Drew, silly!" </talk>
 	<talk input="what are you"> "Hahahahaha, *brainwipe initiated*" </talk>
 </basic_convo_inputs>
@@ -72,3 +73,4 @@
 		
 	</convo>
 </basic_convo_outputs>
+</document>
