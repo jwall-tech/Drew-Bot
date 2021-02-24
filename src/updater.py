@@ -12,15 +12,19 @@ class Updater():
         canUpdate = self._canupdate()
         if canUpdate:
             os.system("cls")
-            print("UPDATING")
+            print("UPDATING "+canUpdate[0])
             startTable = []
-            start = "../"
+            start = "../src"
+            vfile = open("../version.txt","w")
+            print(canUpdate[0])
+            vfile.write(canUpdate[0])
+            vfile.close()
             os.system("color 2")
             def searchFolder(start):
                 for file in os.listdir(start):
                     location = start + "/" +file
                     if not file.startswith("__"):
-                        if os.path.isdir(file):
+                        if os.path.isdir(location):
                             print("Searching Folder "+file+"\n")
                             searchFolder(location)
                         else:
@@ -35,6 +39,7 @@ class Updater():
                             try:
                                 temp = open(location,"w")
                                 temp.write(gfile.text)
+                                temp.close()
                                 print("Updated file "+file)
                             except Exception as e:
                                 print("Error Writing to file "+file)
@@ -55,7 +60,7 @@ class Updater():
             Vers = lines[0]
             if float(Vers.split(":")[1]) < float(check.text.split(":")[1]):
                 print("FOUND VERSION "+check.text)
-                return True
+                return [check.text,True]
         return False
 
     def _parselink(self,locationtable):
