@@ -1,5 +1,5 @@
 ## Bots / AI
-# xd test
+# worked lol
 from chatbot import ChatBot
 import discord as DiscordBot
 

@@ -11,8 +11,37 @@ class Updater():
     def Update(self):
         canUpdate = self._canupdate()
         if canUpdate:
+            os.system("cls")
             print("UPDATING")
-            testPath = self._parselink(["src","drewcore.py"])
+            startTable = []
+            start = "../"
+            os.system("color 2")
+            def searchFolder(start):
+                for file in os.listdir(start):
+                    location = start + "/" +file
+                    if not file.startswith("__"):
+                        if os.path.isdir(file):
+                            print("Searching Folder "+file+"\n")
+                            searchFolder(location)
+                        else:
+                            locationT = []
+                            for item in location.split("/"):
+                                if not item.startswith(".."):
+                                    locationT.append(item)
+                            fileLink = self._parselink(locationT)
+                            print("Getting File "+file+" from "+fileLink+"\n")
+                            gfile = requests.get(fileLink)
+                            print("Writing New Contents from "+file+" to "+location)
+                            try:
+                                temp = open(location,"w")
+                                temp.write(gfile.text)
+                                print("Updated file "+file)
+                            except Exception as e:
+                                print("Error Writing to file "+file)
+                                print(e)
+            searchFolder(start)
+            input("RESTART DREW")
+            exit()
         else:
             print("LATEST VERSION")
             return False
@@ -22,6 +51,7 @@ class Updater():
         if check.status_code == 200:
             myVers = open("../version.txt","r")
             lines = myVers.readlines()
+            myVers.close()
             Vers = lines[0]
             if float(Vers.split(":")[1]) < float(check.text.split(":")[1]):
                 print("FOUND VERSION "+check.text)
@@ -39,6 +69,5 @@ class Updater():
             else:
                 currentPath = currentPath + "/" + item
 
-        print(currentPath)
         os.chdir(myDir)
         return currentPath
