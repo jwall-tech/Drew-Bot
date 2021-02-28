@@ -45,6 +45,7 @@ class Updater():
                                 print("Error Writing to file "+file)
                                 print(e)
             searchFolder(start)
+            print("Updated Files. NOTE: You may need to manually redownload Drew if something isn't working.")
             input("RESTART DREW")
             exit()
         else:
