@@ -10,3 +10,6 @@ IMPORTANT:
 Open Sourcing this
 Very broken version at the moment, the updater is broken and thus not alot of the code works anymore
 Have no intention to fix this as I've lost motivation for the projects, if anybody wants to finish this as you can see it has alot of planned features feel free to contact me
+
+https://www.youtube.com/channel/UCQ78qHr4-OQNdwR_t4XPGlA
+Has the previous 3 versions of Drew
